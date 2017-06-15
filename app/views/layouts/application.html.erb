@@ -28,6 +28,14 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    
+    <!-- flash messages -->
+    <% flash.each do |name, message| %>
+    <div class="flash-message flash-message-<%= name %>">
+      <%= message %>
+    </div>
+    <% end %>
+    <!-- end flash messages -->
 
     <!-- content -->
     <div class="container"  role="main">

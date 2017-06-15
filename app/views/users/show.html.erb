@@ -1,0 +1,12 @@
+<h1>User Homepage</h1>
+
+
+<p>Name: <%= @user.name %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Mood: <%= @user.mood %></p>
+<p>Height: <%= @user.height %></p>
+<p>ADMIN: <%= @user.admin %> </p>
+
+<%= link_to "Edit Your Profile", edit_user_path(@user)%><br>
+<%= link_to "See attractions", attractions_path %>
+<%= link_to "Log Out", logout_path, method: "delete" %>

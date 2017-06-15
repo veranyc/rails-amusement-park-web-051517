@@ -1,0 +1,17 @@
+<h1>All Attractions</h1>
+
+<p>Rides have links to their show page</p>
+
+<% @attractions.each do |a| %>
+<% if current_user.admin %>
+<%= link_to "Show #{a.name}", attraction_path(a)%><br>
+<% else %>
+<%= link_to "Go on #{a.name}", attraction_path(a)%><br>
+<% end %>
+<% end %>
+<br>
+<br>
+<br>
+<% if current_user.admin %>
+<%= link_to "New Attraction", attractions_new_path %>
+<% end %>
