@@ -23,6 +23,7 @@ class Ride < ActiveRecord::Base
       @user.update(:tickets => (@user.tickets - @attraction.tickets))
       @user.update(:nausea => (@user.nausea + @attraction.nausea_rating))
       @user.update(:happiness => (@user.happiness + @attraction.happiness_rating))
+      return "Thanks for riding the #{@attraction.name}!"
     end
   end
 
